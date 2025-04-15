@@ -23,7 +23,13 @@ class InvestorController extends Controller
             'investment_type' => 'required|string|in:micro,sponsor,benefactor',
         ]);
 
-        $investor = Investor::create($validated);
+        Investor::create([
+            'first_name' => $validated['first_name'],
+            'last_name' => $validated['last_name'],
+            'phone' => $validated['phone'],
+            'address' => $validated['address'],
+            'investment_type' => $validated['investment_type'],
+        ]);
 
         return redirect()->route('investors.index')->with('success', 'Investor created successfully!');
     }
