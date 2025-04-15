@@ -34,5 +34,9 @@ class InvestorController extends Controller
         return redirect()->route('investors.index')->with('success', 'Investor created successfully!');
     }
 
+    public function create (){
+        return inertia('Investor/Create');
+    }
+
 
 }

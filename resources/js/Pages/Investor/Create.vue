@@ -79,7 +79,7 @@ const submit = () => {
         >
           <option value="">-- Select Type --</option>
           <option value="micro">micro</option>
-          <option value="Sponsor">Sponsor</option>
+          <option value="sponsor">Sponsor</option>
           <option value="benefactor">Benefactor</option>
         </select>
         <p v-if="form.errors.investment_type" class="text-red-500 text-sm">{{ form.errors.investment_type }}</p>

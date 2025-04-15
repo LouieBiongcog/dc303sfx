@@ -16,7 +16,7 @@ Route::get('/', function () {
     return inertia('Landing');
 });
 
-Route::get('/investors', [InvestorController::class, 'index']);
+Route::get('/investors', [InvestorController::class, 'index']) ->name('investors.index');
 
 Route::get('/about', function() {
     return inertia('About');
